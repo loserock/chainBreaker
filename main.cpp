@@ -8,8 +8,7 @@ int main(int argc, char *argv[])
     // parsing args
     for (int i = 1; i < argc; ++i)
     {
-        // TODO fix parsing args
-        if (argv[i] == "--test" || argv[i][0] == 't')
+        if (string(argv[i]) == "--test")
         {
                 // TODO configurable test modes
                 g_runningMode |= RunningModes::TestMode;
