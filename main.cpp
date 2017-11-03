@@ -25,6 +25,8 @@ int main(int argc, char *argv[])
         main_test();
     }
 
+    SDL_Quit();
+
     return 0;
 }
 
@@ -35,6 +37,6 @@ int main_test()
     testWindow.InitWindow();
     testWindow.ShowWindow();
     SDL_Delay(5000);
-
+    
     return 0;
 }

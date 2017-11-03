@@ -2,6 +2,7 @@
 
 #include <SDL_assert.h>
 #include <string>
+#include <iostream>
 #include "global_structs.h"
 
 using namespace std;
@@ -18,3 +19,7 @@ using namespace std;
 
 #define ASSERT(C) ASSERT_L(2, C)
 
+#define ASSERT_WITH_LOGS(C)             \
+    if (!C)                             \
+        cerr << SDL_GetError() << endl; \
+    ASSERT(C)                           \
